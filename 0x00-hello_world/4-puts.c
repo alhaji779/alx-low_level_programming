@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - entry point
+ *
+ * return value is 0
+ */
 
 int main(void)
 {
