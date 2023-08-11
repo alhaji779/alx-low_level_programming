@@ -4,7 +4,7 @@
  *
  * Program to list single digits
  *
- * return: Always equals 0
+ * Return: always equals 0
  *
  */
 int main(void)
