@@ -2,7 +2,10 @@
 /**
  * main - Entry point
  *
+ * Program to list single digits
+ *
  * return: Always equals 0
+ *
  */
 int main(void)
 {
