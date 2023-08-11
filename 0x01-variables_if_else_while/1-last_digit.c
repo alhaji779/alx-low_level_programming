@@ -5,7 +5,7 @@
  * main - Entry point
  *
  * Input a random int
- * Output the sign of the last digit of n 
+ * Output the sign of the last digit of n
  *
  * Return: always 0
  */
