@@ -2,21 +2,19 @@
 /**
  * _islower - checks for lowercase input
  *
- * c is an int argument
+ * requires an argument c
  *
- * Return: always 0
+ * Return: always 0 or 1
  *
  */
 int _islower(int c)
 {
 	if (c >= 97 || c <= 122)
 	{
-		_putchar('1');
+		return(1);
 	}
 	else
 	{
-		_putchar('0');
+		return(0);
 	}
-
-	return (0);
 }
