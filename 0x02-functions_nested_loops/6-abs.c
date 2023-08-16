@@ -2,14 +2,13 @@
 /**
  * _abs - converts to absolute value
  *
- * @int: - requires an integer arg
+ * @c: - requires an integer arg
  *
  * Return: absolute value
  *
  */
-int _abs(int)
+int _abs(int c)
 {
-	int c;
 
 	if (c > 0)
 	{
