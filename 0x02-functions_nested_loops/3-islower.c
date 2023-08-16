@@ -2,7 +2,7 @@
 /**
  * _islower - checks for lowercase input
  *
- * @c - requires an argument c
+ * @c: - requires an argument c
  *
  * Return: always 0 or 1
  *
