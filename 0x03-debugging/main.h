@@ -4,11 +4,9 @@
  * _putchar - used to print to output
  * Return 0
  */
-int _putchar(char);
-void print_alphabet(void);
-void print_alphabet_x10(void);
-int _islower(int c);
-int _isalpha(int c);
+void positive_or_negative(int i);
+int largest_number(int a, int b, int c);
+int convert_day(int month, int day);
 int print_sign(int n);
 int _abs(int);
 int print_last_digit(int);
