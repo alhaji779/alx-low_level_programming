@@ -14,11 +14,11 @@ int main(void)
 	{
 		if (n % a == 0)
 		{
-			n = n / a
+			n = n / a;
 		}
 		else
 		{
-			a++
+			a++;
 		}
 	}
 	printf("%lu\n", n);
