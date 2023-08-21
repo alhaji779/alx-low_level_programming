@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 #include <stdio.h>
 /**
  * _atoi - convert string to int
