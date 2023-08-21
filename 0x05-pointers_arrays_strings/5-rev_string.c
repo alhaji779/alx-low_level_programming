@@ -1,5 +1,5 @@
 #include "main.h"
-#include "strlen.c"
+#include "2-strlen.c"
 /**
  * rev_string - reverse input strings
  * @s: char args
