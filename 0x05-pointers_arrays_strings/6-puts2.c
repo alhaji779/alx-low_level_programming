@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
  * puts2 - prints characters staring with new lines
  * @str: char args
