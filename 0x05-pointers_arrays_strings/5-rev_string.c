@@ -9,10 +9,12 @@
 void rev_string(char *s)
 {
 	int i;
+	char x;
 
-	for (i = strlen(s) - 1; i >= 0; i--)
+	for (i = 0; i < _strlen(s) / 2; i++)
 	{
-		_putchar(*(s + i));
+		t = s[i];
+		s[i] = s[_strlen(s) - i - 1];
+		s[_strlen(s) - i - 1] = t;
 	}
-	_putchar('\n');
 }
