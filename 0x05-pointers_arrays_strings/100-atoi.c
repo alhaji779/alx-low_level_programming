@@ -11,20 +11,26 @@ int _atoi(char *s)
 {
 	int res = 0;
 	bool is_negative = false;
-
-	if (*s == '-')
-	{
-		is_negative = true;
-		s++;
-	}
+	bool ns = false;
 
 	while (*s)
 	{
-		if (*s < '0' || *s > '9')
+		if (*s == '-' && !ns)
 		{
-			return (0);
+			is_negative = true;
+			ns = true;
+			s++;
+			continue;
 		}
-		res = res * 10 + (*s - '0');
+		if (*s >= '0' && *s <= '9')
+		{
+			ns = true;
+			res = res * 10 + (*s - '0');
+		}
+		else if (ns)
+		{
+			break;
+		}
 		s++;
 	}
 
