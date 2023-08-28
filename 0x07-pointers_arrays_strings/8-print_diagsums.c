@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_diagsums - sum diagonals of matrix
  * @a: char args
@@ -10,10 +11,12 @@ void print_diagsums(int *a, int size)
 {
 	int mDiag;
 	int sumDiag;
+	int i;
+	int j;
 
-	for (int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (int j = 0; j < size; j++)
+		for (j = 0; j < size; j++)
 		{
 			if (i == j)
 			{
