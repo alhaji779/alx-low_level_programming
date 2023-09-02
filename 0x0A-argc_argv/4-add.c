@@ -2,47 +2,41 @@
 #include <stdlib.h>
 #include <stdbool.h>
 /**
- * is_positive - helper function
- * @str: arg
- * Return: True or False
+ * is_digit - checks for letters
+ * @s: string to check
+ * Return: boolean
  */
-bool is_positive(const char *str)
+int is_digit(char *s)
 {
-	int i;
+	int i = 0;
 
-    	for (i = 0; str[i] != '\0'; i++)
-    	{
-        	if (str[i] < '0' || str[i] > '9')
+	for (; s[i] != '\0'; i++)
+	{
+		if (!isdigit(s[i]))
 		{
-            	return false;
-        	}
-    	}
-    	return true;
+			return (0);
+		}
+	}
+	return (1);
 }
-
 /**
  * main - main function
- * @argc: argument count
+ * @argc: argumentc
  * @argv: vector of arguments
- * Return: 1
+ *Return: always 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char  *argv[])
 {
 	int i;
-	int sum = 0;
+	int result = 0;
 
-	if (argc < 1)
+	if (argc > 1)
 	{
-		printf("%d\n", 0);
-		return (1);
-	}
-	else
-	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			if (is_positive(argv[i]))
+			if (is_digit(argv[i]))
 			{
-				sum += atoi(argv[i]);
+				result += atoi(argv[i]);
 			}
 			else
 			{
@@ -50,7 +44,13 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
+		printf("%d\n", result);
 		return (0);
 	}
+	else
+	{
+		printf("%d\n", 0);
+		return (1);
+	}
+
 }
