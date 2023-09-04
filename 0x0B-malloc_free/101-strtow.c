@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * strtow - string to words
  * @str: string to check
@@ -13,25 +14,32 @@ char **strtow(char *str)
         return (NULL);
     }
 
-    int i, j, k, len, word_count = 0;
+    int i;
+    int j;
+    int k;
+    int len;
+    int word_count = 0;
     char **words;
 
-    // Counting number of words in the string
+
     for (i = 0; str[i]; i++)
     {
-        if (str[i] != ' ' && (i == 0 || str[i - 1] == ' ')) {
+        if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+	{
             word_count++;
         }
     }
 
-    // Allocating memory for pointers to words + NULL pointer at the end
+
     words = (char **)malloc((word_count + 1) * sizeof(char *));
     if (!words)
     {
         return (NULL);
     }
 
-    int start = 0, end = 0, word_len;
+    int start = 0;
+    int end = 0;
+    int word_len;
     k = 0;
     for (i = 0; str[i]; i++)
     {
