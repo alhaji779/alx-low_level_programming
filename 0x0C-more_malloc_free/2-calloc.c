@@ -1,26 +1,24 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
-* _calloc - caloc function
-*@nmemb: number of elements
-*@size: size of the memory block to be allocated
-*
-*Return: poiner to the address of the memory block
-*/
+ * _calloc - calloc function
+ * @nmemb: number of elements args
+ * @size: size of bytes
+ * Return: pointer or void
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *block;
+	char *t;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	block = malloc(nmemb * size);
-	if (block != NULL)
-	{
-		for (i = 0; i < (nmemb * size); i++)
-			block[i] = 0;
-		return (block);
-	}
-	else
+	t = malloc(nmemb * size);
+	if (t == NULL)
 		return (NULL);
+	for (i = 0; i < nmemb * size; i++)
+		t[i] = 0;
+
+	return (t);
 }
