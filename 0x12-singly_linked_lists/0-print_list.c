@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 /**
  * print_list - prints a list
  * @h: head
@@ -19,5 +20,5 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		i++;
 	}
-	return (count);
-g
+	return (i);
+}
