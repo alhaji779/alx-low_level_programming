@@ -1,1 +1,0 @@
-Sigly Linked List Tutorial
