@@ -16,7 +16,7 @@ int checker(int i, int n)
 		{
 			return (-1);
 		}
-		j = checker(i + 1, n);
+		x = checker(i + 1, n);
 		return (x + 1);
 	}
 	return (0);
