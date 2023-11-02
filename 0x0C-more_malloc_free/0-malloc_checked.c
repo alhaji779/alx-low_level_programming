@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 
 	void *ptArry;
 
-	ptArry = malloc(sizeof(unsigned int));
+	ptArry = malloc(b);
 	if (ptArry == NULL)
 		exit(98);
 
