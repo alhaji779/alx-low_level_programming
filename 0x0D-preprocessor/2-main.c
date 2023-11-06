@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
  * main - main function
+ *
  * return: int
  */
 
-int main()
+int main(void)
 {
 	printf("%s\n", __FILE__);
 
