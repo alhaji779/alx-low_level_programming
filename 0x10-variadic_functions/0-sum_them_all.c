@@ -25,7 +25,6 @@ int sum_them_all(const unsigned int n, ...)
 	}
 
 	va_end(mlist);
-	printf("%u\n", count);
 
-	return (0);
+	return (sum);
 }
