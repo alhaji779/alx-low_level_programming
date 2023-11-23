@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int x = 1;
 
-	x <<= ((sizeof(i) * 8) - 1);
+	x <<= ((sizeof(x) * 8) - 1);
 	if (n == 1)
 	{
 		_putchar('1');
@@ -35,5 +35,4 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 		x = x >> 1;
 	}
-
 }
