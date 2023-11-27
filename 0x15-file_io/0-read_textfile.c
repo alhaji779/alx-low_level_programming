@@ -22,15 +22,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (fn == -1)
 		return (0);
-
-	if (read(fn, arr, letters) == -1)
+	copied = read(fn, arr, letters);
+	if (copied == -1)
 		return (0);
-	result = write(STDOUT_FILENO, arr, read(fn, arr, letters));
+	result = write(STDOUT_FILENO, arr, copied);
 	if (result == -1)
 		return (0);
 	if (close(fn) == -1)
 		return (0);
 
 	free(arr);
-	return (read(fn, arr, letters))
+	return (copied);
 }
